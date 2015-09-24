@@ -1,0 +1,5 @@
+.. title:: FigRecipes
+
+FigRecipes docs
+
+
