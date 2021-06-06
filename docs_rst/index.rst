@@ -1,0 +1,48 @@
+--------------
+Plotting tools
+--------------
+
+Plot data from either arrays or dataframes using `Plotly <https://plot.ly/>`_ with figrecipes
+_____________________________________________________________________________________________
+
+In the figrecipes partner code to the matminer library, we have developed utilities that make it easier and faster to plot common figures with Plotly. The figrecipes module is aimed at making it easy for the user to create plots from their data using just a few lines of code, utilizing the wide and flexible functionality of Plotly, while at the same time sheilding the complexities involved.
+
+
+Check out an example code and figure generated with figrecipes:
+
+.. code-block:: python
+
+   from matminer import PlotlyFig
+   from matminer.datasets import load_dataset
+   df = load_dataset("elastic_tensor_2015")
+   pf = PlotlyFig(
+       df,
+       y_title='Bulk Modulus (GPa)',
+       x_title='Shear Modulus (GPa)',
+       filename='bulk_shear_moduli'
+   )
+
+   pf.xy(
+       ('G_VRH', 'K_VRH'),
+       labels='material_id',
+       colors='poisson_ratio',
+       colorscale='Picnic',
+       limits={'x': (0, 300)}
+   )
+
+This code generates the following figure from the matminer elastic dataset dataframe.
+
+.. raw:: html
+
+
+    <iframe src="_static/bulk_shear_moduli.html" height="1000px" width=90%" align="center" frameBorder="0">Browser not compatible.</iframe>
+
+The figrecipes code contains the :code:`PlotlyFig` class that wraps around Plotly's Python API and follows its JSON schema. Check out the examples below to see how to use the plotting functionality!
+
+
+
+Examples
+_________
+
+
+You can find examples of the figrecipes code in the `matminer_examples <https://github.com/hackingmaterials/matminer_examples>`_.
