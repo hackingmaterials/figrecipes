@@ -14,8 +14,8 @@ import unittest
 import json
 import numpy as np
 import pandas as pd
-from pymatgen.util.testing import PymatgenTest
-from matminer.figrecipes.plot import PlotlyFig
+
+from figrecipes.plot import PlotlyFig
 
 a = [1.6, 2.1, 3]
 b = [1, 4.2, 9]
@@ -120,7 +120,7 @@ def refresh_json(open_plots=False):
             pf.create_plot(obj, return_plot=False)
 
 
-class PlotlyFigTest(PymatgenTest):
+class PlotlyFigTest(unittest.TestCase):
     def setUp(self):
         self.pf = PlotlyFig(**pfkwargs)
         self.base_dir = os.path.dirname(os.path.realpath(__file__))

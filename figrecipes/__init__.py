@@ -1,0 +1,1 @@
+from figrecipes.plot import PlotlyFig
