@@ -8,11 +8,11 @@ module_dir = os.path.dirname(os.path.abspath(__file__))
 
 if __name__ == "__main__":
     setup(
-        name='FigRecipes',
-        version='0.0.2',
-        description='FigRecipes is a skeleton for creating Python projects',
+        name='figrecipes',
+        version='0.0.3',
+        description='figrecipes is a tool for quickly creating interactive plots for data science.',
         long_description=open(os.path.join(module_dir, 'README.rst')).read(),
-        url='https://github.com/computron/FigRecipes',
+        url='https://github.com/hackingmaterials/figrecipes',
         author='Anubhav Jain',
         author_email='anubhavster@gmail.com',
         license='modified BSD',
