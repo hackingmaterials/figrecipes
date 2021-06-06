@@ -1,4 +1,4 @@
-## FigRecipes
+# FigRecipes
 
 ![overview](./docs_rst/_static/overview.png)
 
