@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>figrecipes.tests package &#8212; figrecipes  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">figrecipes  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">figrecipes.tests package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="figrecipes-tests-package">
+<h1>figrecipes.tests package<a class="headerlink" href="#figrecipes-tests-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-figrecipes.tests.test_plots">
+<span id="figrecipes-tests-test-plots-module"></span><h2>figrecipes.tests.test_plots module<a class="headerlink" href="#module-figrecipes.tests.test_plots" title="Permalink to this headline">¶</a></h2>
+<p>PlotlyFig testing. Most tests are run by comparing generated Plotly figures
+with pre-generated json files. Some are just ensuring Plotly does not throw
+errors.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="figrecipes.tests.test_plots.PlotlyFigTest">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">figrecipes.tests.test_plots.</span></span><span class="sig-name descname"><span class="pre">PlotlyFigTest</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">methodName</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'runTest'</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#figrecipes.tests.test_plots.PlotlyFigTest" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">unittest.case.TestCase</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="figrecipes.tests.test_plots.PlotlyFigTest.fopen">
+<span class="sig-name descname"><span class="pre">fopen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fname</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#figrecipes.tests.test_plots.PlotlyFigTest.fopen" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="figrecipes.tests.test_plots.PlotlyFigTest.setUp">
+<span class="sig-name descname"><span class="pre">setUp</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#figrecipes.tests.test_plots.PlotlyFigTest.setUp" title="Permalink to this definition">¶</a></dt>
+<dd><p>Hook method for setting up the test fixture before exercising it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="figrecipes.tests.test_plots.PlotlyFigTest.test_bar">
+<span class="sig-name descname"><span class="pre">test_bar</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#figrecipes.tests.test_plots.PlotlyFigTest.test_bar" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="figrecipes.tests.test_plots.PlotlyFigTest.test_heatmap_basic">
+<span class="sig-name descname"><span class="pre">test_heatmap_basic</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#figrecipes.tests.test_plots.PlotlyFigTest.test_heatmap_basic" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="figrecipes.tests.test_plots.PlotlyFigTest.test_heatmap_df">
+<span class="sig-name descname"><span class="pre">test_heatmap_df</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#figrecipes.tests.test_plots.PlotlyFigTest.test_heatmap_df" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="figrecipes.tests.test_plots.PlotlyFigTest.test_histogram">
+<span class="sig-name descname"><span class="pre">test_histogram</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#figrecipes.tests.test_plots.PlotlyFigTest.test_histogram" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="figrecipes.tests.test_plots.PlotlyFigTest.test_parallel_coordinates">
+<span class="sig-name descname"><span class="pre">test_parallel_coordinates</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#figrecipes.tests.test_plots.PlotlyFigTest.test_parallel_coordinates" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="figrecipes.tests.test_plots.PlotlyFigTest.test_scatter_matrix">
+<span class="sig-name descname"><span class="pre">test_scatter_matrix</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#figrecipes.tests.test_plots.PlotlyFigTest.test_scatter_matrix" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="figrecipes.tests.test_plots.PlotlyFigTest.test_triangle">
+<span class="sig-name descname"><span class="pre">test_triangle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#figrecipes.tests.test_plots.PlotlyFigTest.test_triangle" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="figrecipes.tests.test_plots.PlotlyFigTest.test_violin">
+<span class="sig-name descname"><span class="pre">test_violin</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#figrecipes.tests.test_plots.PlotlyFigTest.test_violin" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="figrecipes.tests.test_plots.PlotlyFigTest.test_xy">
+<span class="sig-name descname"><span class="pre">test_xy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#figrecipes.tests.test_plots.PlotlyFigTest.test_xy" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="figrecipes.tests.test_plots.refresh_json">
+<span class="sig-prename descclassname"><span class="pre">figrecipes.tests.test_plots.</span></span><span class="sig-name descname"><span class="pre">refresh_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">open_plots</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#figrecipes.tests.test_plots.refresh_json" title="Permalink to this definition">¶</a></dt>
+<dd><p>For developer use. Refresh the json files and open plots to see if they
+look good. Use this function to set the current PlotlyFig build outputs
+as the true values of the tests.</p>
+<dl class="simple">
+<dt>Args:</dt><dd><dl class="simple">
+<dt>open_plots (bool): If True, opens all plots generated. Useful if you</dt><dd><p>want to check the current build outputs to make sure they look good.
+If False, just generates the json files and quits.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+<section id="module-figrecipes.tests">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-figrecipes.tests" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">figrecipes.tests package</a><ul>
+<li><a class="reference internal" href="#submodules">Submodules</a></li>
+<li><a class="reference internal" href="#module-figrecipes.tests.test_plots">figrecipes.tests.test_plots module</a></li>
+<li><a class="reference internal" href="#module-figrecipes.tests">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/figrecipes.tests.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">figrecipes  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">figrecipes.tests package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Anubhav Jain.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </div>
+  </body>
+</html>

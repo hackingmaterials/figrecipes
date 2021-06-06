@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Plotting tools &#8212; figrecipes  documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/nature.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">figrecipes  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Plotting tools</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <section id="plotting-tools">
+<h1>Plotting tools<a class="headerlink" href="#plotting-tools" title="Permalink to this headline">¶</a></h1>
+<section id="plot-data-from-either-arrays-or-dataframes-using-plotly-with-figrecipes">
+<h2>Plot data from either arrays or dataframes using <a class="reference external" href="https://plot.ly/">Plotly</a> with figrecipes<a class="headerlink" href="#plot-data-from-either-arrays-or-dataframes-using-plotly-with-figrecipes" title="Permalink to this headline">¶</a></h2>
+<p>In the figrecipes partner code to the matminer library, we have developed utilities that make it easier and faster to plot common figures with Plotly. The figrecipes module is aimed at making it easy for the user to create plots from their data using just a few lines of code, utilizing the wide and flexible functionality of Plotly, while at the same time sheilding the complexities involved.</p>
+<p>Check out an example code and figure generated with figrecipes:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">matminer</span> <span class="kn">import</span> <span class="n">PlotlyFig</span>
+<span class="kn">from</span> <span class="nn">matminer.datasets</span> <span class="kn">import</span> <span class="n">load_dataset</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">load_dataset</span><span class="p">(</span><span class="s2">&quot;elastic_tensor_2015&quot;</span><span class="p">)</span>
+<span class="n">pf</span> <span class="o">=</span> <span class="n">PlotlyFig</span><span class="p">(</span>
+    <span class="n">df</span><span class="p">,</span>
+    <span class="n">y_title</span><span class="o">=</span><span class="s1">&#39;Bulk Modulus (GPa)&#39;</span><span class="p">,</span>
+    <span class="n">x_title</span><span class="o">=</span><span class="s1">&#39;Shear Modulus (GPa)&#39;</span><span class="p">,</span>
+    <span class="n">filename</span><span class="o">=</span><span class="s1">&#39;bulk_shear_moduli&#39;</span>
+<span class="p">)</span>
+
+<span class="n">pf</span><span class="o">.</span><span class="n">xy</span><span class="p">(</span>
+    <span class="p">(</span><span class="s1">&#39;G_VRH&#39;</span><span class="p">,</span> <span class="s1">&#39;K_VRH&#39;</span><span class="p">),</span>
+    <span class="n">labels</span><span class="o">=</span><span class="s1">&#39;material_id&#39;</span><span class="p">,</span>
+    <span class="n">colors</span><span class="o">=</span><span class="s1">&#39;poisson_ratio&#39;</span><span class="p">,</span>
+    <span class="n">colorscale</span><span class="o">=</span><span class="s1">&#39;Picnic&#39;</span><span class="p">,</span>
+    <span class="n">limits</span><span class="o">=</span><span class="p">{</span><span class="s1">&#39;x&#39;</span><span class="p">:</span> <span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">300</span><span class="p">)}</span>
+<span class="p">)</span>
+</pre></div>
+</div>
+<p>This code generates the following figure from the matminer elastic dataset dataframe.</p>
+<iframe src="_static/bulk_shear_moduli.html" height="1000px" width=90%" align="center" frameBorder="0">Browser not compatible.</iframe><p>The figrecipes code contains the <code class="code docutils literal notranslate"><span class="pre">PlotlyFig</span></code> class that wraps around Plotly’s Python API and follows its JSON schema. Check out the examples below to see how to use the plotting functionality!</p>
+</section>
+<section id="examples">
+<h2>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h2>
+<p>You can find examples of the figrecipes code in the <a class="reference external" href="https://github.com/hackingmaterials/matminer_examples">matminer_examples</a>.</p>
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="#">Table of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Plotting tools</a><ul>
+<li><a class="reference internal" href="#plot-data-from-either-arrays-or-dataframes-using-plotly-with-figrecipes">Plot data from either arrays or dataframes using Plotly with figrecipes</a></li>
+<li><a class="reference internal" href="#examples">Examples</a></li>
+</ul>
+</li>
+</ul>
+
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/index.rst.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="#">figrecipes  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">Plotting tools</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2021, Anubhav Jain.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.0.2.
+    </div>
+  </body>
+</html>
