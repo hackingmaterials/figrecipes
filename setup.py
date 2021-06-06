@@ -15,7 +15,7 @@ if __name__ == "__main__":
         name='figrecipes',
         version='0.0.3',
         description='figrecipes is a tool for quickly creating interactive plots for data science.',
-        long_description=open(os.path.join(module_dir, 'README.rst')).read(),
+        long_description=open(os.path.join(module_dir, 'README.md')).read(),
         url='https://github.com/hackingmaterials/figrecipes',
         author='Anubhav Jain',
         author_email='anubhavster@gmail.com',
