@@ -1062,7 +1062,7 @@ class PlotlyFig:
             if labels is None:
                 labels = [None] * len(y)
         else:
-            y = data.as_matrix().tolist()
+            y = data.to_numpy().tolist()
             x = [data.columns.values] * len(y)
 
         if colors is not None:
@@ -1372,7 +1372,7 @@ class PlotlyFig:
             if not self.df:
                 raise ValueError("Either data or self.df (set in initializer)" "must be defined.")
             else:
-                data = self.df.as_matrix()
+                data = self.df.to_numpy()
                 x_labels = self.df.columns.values.tolist()
                 y_labels = self.df.index.values.tolist()
 
@@ -1791,6 +1791,6 @@ class PlotlyFig:
     #         data[col] = scaler.fit_transform(data[col])
     #
     #     if normalize: # TODO: maybe enforce this? because if not normalized, this plot doesn't make much sense
-    #         sums = data[cols].as_matrix().sum(axis=1)
+    #         sums = data[cols].to_numpy().sum(axis=1)
     #         for col in data:
     #             data[col] /= sums
