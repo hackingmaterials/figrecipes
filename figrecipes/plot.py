@@ -697,9 +697,6 @@ class PlotlyFig:
             fig["layout"]["legend"]["y"] = 1.1
             fig["layout"]["legend"]["orientation"] = "h"
 
-
-        import pprint
-        pprint.pprint(fig)
         return self.create_plot(fig, return_plot)
 
     def scatter_matrix(
