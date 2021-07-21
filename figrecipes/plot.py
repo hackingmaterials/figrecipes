@@ -34,7 +34,7 @@ class PlotlyFig:
         fontscale=1,
         fontsize=25,
         fontfamily="Courier",
-        bgcolor="white",
+        bgcolor=None,
         fontcolor=None,
         colorscale="Viridis",
         height=None,
@@ -253,8 +253,8 @@ class PlotlyFig:
             "titlefont": font_style,
             "tickfont": font_style,
         }
-        self.layout["plot_bgcolor"] = bgcolor
-        self.layout["paper_bgcolor"] = bgcolor
+        # self.layout["plot_bgcolor"] = bgcolor
+        # self.layout["paper_bgcolor"] = bgcolor
         self.layout["hoverlabel"] = {"font": font_style}
         self.layout["title"] = title
 
@@ -683,11 +683,23 @@ class PlotlyFig:
                     "visible": True,
                 }
 
+
+        for axis in ["xaxis", "yaxis"]:
+            layout[axis]["showgrid"] = True
+            layout[axis]["showline"] = True
+            layout[axis]["linewidth"] = 2
+            layout[axis]["linecolor"] = "#000000"
+
+
         fig = {"data": traces, "layout": layout}
         if any([show for show in showscale]):
             fig["layout"]["legend"]["x"] = 0.1
             fig["layout"]["legend"]["y"] = 1.1
             fig["layout"]["legend"]["orientation"] = "h"
+
+
+        import pprint
+        pprint.pprint(fig)
         return self.create_plot(fig, return_plot)
 
     def scatter_matrix(
