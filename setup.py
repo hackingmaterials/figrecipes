@@ -13,7 +13,7 @@ reqs_list = [r for r in reqs_raw.split("\n")]
 if __name__ == "__main__":
     setup(
         name='figrecipes',
-        version='0.0.3',
+        version='0.0.4',
         description='figrecipes is a tool for quickly creating interactive plots for data science.',
         long_description=open(os.path.join(module_dir, 'README.md')).read(),
         url='https://github.com/hackingmaterials/figrecipes',
