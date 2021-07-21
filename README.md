@@ -11,4 +11,11 @@ Originally packaged with the [matminer code](https://github.com/hackingmaterials
 - [Matminer code](https://github.com/hackingmaterials/matminer)
 
 
+Figrecipes is pip installable! You can install figrecipes with 
+
+```
+pip install figrecipes
+```
+
+
 Find examples on the [matminer examples repo](https://github.com/hackingmaterials/matminer_examples). 
