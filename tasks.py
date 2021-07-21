@@ -4,8 +4,12 @@
 
 import os
 import webbrowser
+import requests
+import json
 from invoke import task
 from monty.os import cd
+
+from figrecipes import __version__
 
 
 """
@@ -45,3 +49,27 @@ def update_doc(ctx):
 def open_doc(ctx):
     pth = os.path.abspath("docs/index.html")
     webbrowser.open("file://" + pth)
+
+@task
+def release(ctx):
+    payload = {
+        "tag_name": "v" + __version__,
+        "target_commitish": "main",
+        "name": "v" + __version__,
+        "body": "",
+        "draft": False,
+        "prerelease": False
+    }
+    response = requests.post(
+        "https://api.github.com/repos/hackingmaterials/figrecipes/releases",
+        data=json.dumps(payload),
+        headers={
+            "Authorization": "token " + os.environ["GITHUB_RELEASES_TOKEN"]})
+    print(response.text)
+
+
+@task
+def publish(ctx):
+    ctx.run("rm -r dist build", warn=True)
+    ctx.run("python3 setup.py sdist bdist_wheel")
+    ctx.run("twine upload dist/* --verbose")
