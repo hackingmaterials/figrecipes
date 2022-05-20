@@ -1,5 +1,7 @@
 # FigRecipes
 
+### Warning! this repository is no longer actively maintained or updated.
+
 ![overview](./docs_rst/_static/overview.png)
 
 A repo to help with interactive plotting in data mining applications. 
